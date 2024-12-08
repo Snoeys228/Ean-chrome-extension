@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "EAN Google Search",
+  "version": "1.0",
+  "description": "Search for EAN codes on Google and open the first result",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search?*"],
+      "js": ["content.js"]
+    }
+  ]
+}
